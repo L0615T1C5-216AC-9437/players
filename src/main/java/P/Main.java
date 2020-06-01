@@ -9,7 +9,7 @@ public class Main extends Plugin {
     public void registerClientCommands(CommandHandler handler) {
         handler.<Player>register("players", "Lists all players", (arg, player) -> {
             StringBuilder builder = new StringBuilder();
-            builder.append("[accent]List of all Players:");
+            builder.append("[accent]List of all Players:\n");
             for (Player p : Vars.playerGroup.all()) {
                 if (p.isAdmin) {
                     builder.append("[gold]\uE828 [white]: ");
