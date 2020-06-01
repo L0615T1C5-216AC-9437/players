@@ -6,14 +6,8 @@ import mindustry.entities.type.Player;
 import mindustry.plugin.Plugin;
 
 public class Main extends Plugin {
-    //Var
-    ///Var
-    //on start
-    public Main() {
-    }
-
     public void registerClientCommands(CommandHandler handler) {
-        handler.<Player>register("async", "toggle auto-sync", (arg, player) -> {
+        handler.<Player>register("players", "Lists all players", (arg, player) -> {
             StringBuilder builder = new StringBuilder();
             builder.append("[accent]List of all Players:");
             for (Player p : Vars.playerGroup.all()) {
